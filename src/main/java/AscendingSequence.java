@@ -5,6 +5,18 @@ public class AscendingSequence {
     public int[] ascendingSequenceAlgorithm(int start, int end, int step) {
         if(step > 0 && start < end) {
             int[] result = new int[(end - start + 1) / step]; //+1 так как 0 и 5 включительно
+            for(int i = 0; i < result.length; i ++) {      // идем по индексам массива
+                if (start <= end) {
+                    result[i] = start;
+                    start += step;                          // start = start + step
+                }
+            }
+
+            return result;
+        }
+
+        return new int[]{};
+    }
 
 //            int j = 0;
 //
@@ -16,19 +28,4 @@ public class AscendingSequence {
 //            }
 
 //            return result;
-
-            for(int i = 0; i < result.length; i ++) {      // идем по индексам массива
-                if (start <= end) {
-                    result[i] = start;
-                    start += step;                          // start = start + step
-                }
-
-            }
-
-            return result;
-        }
-
-        return new int[]{};
-    }
-
 }
