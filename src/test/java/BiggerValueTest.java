@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BiggerValueTest {
@@ -25,6 +22,8 @@ public class BiggerValueTest {
 
         BiggerValue bV = new BiggerValue();
         int actualResult = bV.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Order(3)
@@ -36,6 +35,8 @@ public class BiggerValueTest {
 
         BiggerValue bV = new BiggerValue();
         int actualResult = bV.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Order(4)
@@ -47,6 +48,8 @@ public class BiggerValueTest {
 
         BiggerValue bV = new BiggerValue();
         int actualResult = bV.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Order(5)
@@ -58,6 +61,8 @@ public class BiggerValueTest {
 
         BiggerValue bV = new BiggerValue();
         int actualResult = bV.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Order(6)
@@ -69,5 +74,7 @@ public class BiggerValueTest {
 
         BiggerValue bV = new BiggerValue();
         int actualResult = bV.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
     }
 }
